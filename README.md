@@ -10,6 +10,7 @@
 - 不持久化page text；wikitext仅在流式选中修订后暂存并解析，结果仅标题/ID/redirect/link/category等图字段。
 - 原始源文件只读；处理缓存、spill和数据产物落指定SSD项目目录。私有path/host信息不进Git或dashboard。
 - 来源计划和实际构建是不同状态；新增来源产生新version，不覆盖旧snapshot generation。
+- 分类网络无法重建时，采用同wiki之后最近可重建的分类网络；page network仍属原目标时间，明确标记分类实际时间与未来近似。见[分类回填口径](docs/category-fallback-policy.md)；当前为契约更新，尚无真实回填图产出。
 
 ## 当前实测（2026-10-21）
 

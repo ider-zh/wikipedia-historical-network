@@ -38,6 +38,12 @@
 - 分类使用可追溯的 `(wiki, normalized_category_title)` 注册键，可映射到 snapshot page ID；SQL 中的 page IDs 仅在该 SQL dump 的 page 表内解释，不能和异年份 XML ID 直接硬连接。映射不明时保留 unresolved，而不是丢边或误连。
 - `category tree = XML observations ∪ SQL observations` 是用户接受的融合视图。XML/SQL 原始观察分开存，union 边带来源标记；SQL 时间不等于历史 snapshot 时间时必须标记近似。不能把较晚才出现的分类边当作已证实的早期存在。
 
+## 分类网络的后续时点回填
+
+用户确认：目标T的category network无法重建时，采用同wiki、C>T且最近可重建时点C的分类网络作为替代视图。page network继续独立恢复T，不回填未来页面/修订；原T部分分类观察和错误证据保留。选择依据是分类图有效时间，不是dump发布日期。分类成员与层次关系引用C的不可变generation，不跨时点硬连page/category IDs。必须展示target_time、category_effective_time、实际generation及future approximation标记；无后续候选时分类blocked。此规则不绕过parser、source hash/coverage、必需身份映射门，也不将真实空分类图视作失败。详见[分类回填策略](category-fallback-policy.md)。
+
+本次为口径/契约更新；generation registry、回填resolver和双时间公开投影尚待实现，不声称当前已执行回填。
+
 ## 增量和版本
 
 每个 snapshot 有独立 plan version、recipe SHA256 与构建 generation。状态依次区分 `blocked / planned_unverified / validated / building / verified / published`，本阶段最多到来源计划。

@@ -1,4 +1,6 @@
-# Source policy v1 · 选源规则与非精确性
+# Source policy v2 · 选源与分类网络回填口径
+
+2026-10-21追加：目标snapshot分类网络无法重建时，使用同wiki、目标之后最近可重建的category network；保留原目标时间、实际分类图有效时间及future fallback标签。page network不回填未来。详细选择、身份、版本及实施边界见[分类回填策略](category-fallback-policy.md)。这是图视图层策略，不是把SQL绝对最近选源改成任意未来文件；本文版本也不等于`whn.planner.POLICY_VERSION`已升级。
 
 ## 季度目标
 

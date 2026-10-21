@@ -26,6 +26,17 @@
 
 单归档XML完整EOF/CRC及上游历史选择已验证：44,221页、105,128修订、27,180条选中记录与独立审计一致。真实wikitext管道在第27条记录拒绝；SQL缺同源linktarget。**真实局部图与完整季度图均未完成，英文批量不启动。** 详见[试跑报告](pilot-report.md)、[来源验证](pilot-source-validation.md)、[执行契约](pilot-design.md)。主项目65项测试通过；合成Parquet fixture不是维基图产物。
 
+## 分类回填追加口径与后续验收
+
+已确认并固化[分类回填策略](category-fallback-policy.md)：目标分类侧不可重建时，用同wiki之后最近可重建分类网络；不更改目标页面图，不把未来分类写成同期恢复。
+
+- [x] 更新来源策略、架构、存储契约和README，保留失败原因、双时间与不可变generation出处。
+- [ ] 实现可重建分类候选/已验证generation registry和nearest-later resolver；测试native优先、真正空图、不同wiki、较近候选待定、无后续候选及更近新来源替换。
+- [ ] 在通过hash/覆盖/parser/身份门后构建候选；实际回填仅引用验证通过generation，不使用metadata-only或局部archive冒充完整分类图。
+- [ ] 分类视图版本和跨时点身份映射独立追加；dashboard/统计同时展示target_time与category_effective_time。仅分类策略变化不重跑未变化的页面图。
+
+现有206份dump来源计划未覆盖或自动重写；本次没有真实分类回填产物，P1原阻塞仍保留。
+
 ## P2 英文季度图
 
 - 以来源集为单位只解压一次，转瞬选择所有需要季度的revision；重复selected RID的图解析结果可按source/parser/schema身份缓存复用。

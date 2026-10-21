@@ -20,6 +20,12 @@
 
 category_union的来源mask列表增加少量存储但不可省略，否则无法撤回较晚SQL带来的近似边。更早SQL出现时重建SQL观察及union而非重写不可变XML观察。
 
+## 分类回填的视图引用契约
+
+目标T分类侧不可重建时，按[分类回填策略](category-fallback-policy.md)引用同wiki之后最近合格时点C的完整分类侧generation。新增view manifest记录`category_fallback_policy`、`category_mode`、`target_time`、`category_effective_time`、精确正时间偏差、`category_origin_snapshot_id`、`category_origin_generation_id`及manifest SHA256、原生失败原因和跨时间质量标记。引用式复用不要求复制整套Parquet。
+
+XML/SQL mask是C的来源标记，不代表T同期关系；C的page/category整数域不能直接接入T。若需投影到T的页面集合，身份映射和unresolved需单独版本化。分类侧视图更新只使相关分类统计/映射失效，不改写T的page network或旧分类generation。目前是存储契约，回填writer/registry尚未实现。
+
 ## 服务无依赖边界
 
 落地存储无需数据库服务；PyArrow批处理读写，未来可加DuckDB嵌入式查询。wikitext解析如以临时worker/HTTP进程运行，不改变存储层无服务设计。page text只在selected revision流中转瞬存在，解析后丢弃；不能为了不落地正文而声称不必读取正文。
