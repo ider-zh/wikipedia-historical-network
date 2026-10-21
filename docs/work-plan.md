@@ -9,7 +9,7 @@
 - [x] 用真实索引生成206份季度计划、blocked原因、私有来源映射和公开安全投影。
 - [x] 上游复用审阅与历史删除/迁移背景完成，SQL逻辑导出来源另行标记。
 - [x] dashboard读取真实清单，通过浏览器HTTP/file/手机/过滤/详情检查。
-- [ ] 48项本地测试、真实Parquet与隐私投影检查已通过；最后一项审计修复复审及GitHub提交/readback收尾中。
+- [x] 48项本地测试、真实Parquet与隐私投影检查、独立复审通过；初始化提交已推送GitHub并核对远端HEAD及关键文件blob。GitHub Actions尚未启用：现有OAuth缺workflow权限，已保留未激活模板于docs/ci/。
 
 ## P1 中文验证（下一阶段，不在本次自动启动）
 
