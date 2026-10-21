@@ -1,0 +1,3 @@
+# Runtime package pins used by the initial real Parquet read/write verification.
+# Installed in a host executable environment; all data/staging/spill remain on SSD.
+pyarrow==26.0.0

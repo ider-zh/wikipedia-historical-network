@@ -1,0 +1,20 @@
+# Private machine inventories and processing payloads live on the SSD, not Git.
+.private/
+INITIALIZATION_STATE.md
+.env
+.env.*
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+node_modules/
+*.partial
+.DS_Store
+# Generated binaries/data must not accidentally enter this public repository.
+*.parquet
+*.7z
+*.bz2
+*.xml
+*.sql
+*.gz
+*.zip

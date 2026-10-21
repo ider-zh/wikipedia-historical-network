@@ -1,0 +1,189 @@
+{
+  "schema_version": 1,
+  "purpose": "Sanitized prior-study background; not a build result for this repository.",
+  "review_date": "2026-10-21",
+  "local_evidence": [
+    {
+      "label": "final-verification.json",
+      "bytes": 2746123,
+      "sha256": "84ea977b2069638cc455ecd4d5982f2da24381459c265aec2d49da7c1991ae9b"
+    },
+    {
+      "label": "normal-page-check/normal-page-log-evidence.json",
+      "bytes": 10872,
+      "sha256": "f7bca9e90a143ab88c924414bf0ce4a784df6563ba094a30b2350f6a5f0b4552"
+    }
+  ],
+  "verification_boundary": {
+    "prior_status": "verified",
+    "current_review": "Read/hash prior final-verification and corrected normal-page-check evidence; reconcile projected counters. No archive rescan or original verifier rerun.",
+    "official_historical_completeness_verified": false,
+    "raw_source_hashes_are_official": false
+  },
+  "comparison": {
+    "wiki": "enwiki",
+    "old": {
+      "dump_label": "20210501",
+      "archive_count": 705,
+      "namespaces": [
+        0,
+        14
+      ],
+      "pages": 17933535,
+      "revisions": 686697676
+    },
+    "new_identity_lookup": {
+      "dump_label": "20220201",
+      "archive_count": 742,
+      "namespaces": "all",
+      "pages": 55140566,
+      "raw_revision_records": 989043144,
+      "unique_revision_ids": 989043139
+    },
+    "missing_page_ids": 64460,
+    "missing_revision_ids": 894428,
+    "a_missing_page_revision": 892791,
+    "b_retained_page_revision": 1637,
+    "matched_revision_ids": 685803248,
+    "ambiguous_matched_revisions": 0,
+    "missing_page_history_breakdown": {
+      "all_old_rids_survive_elsewhere": 229,
+      "partial_survival": 62,
+      "all_old_rids_missing": 64169,
+      "provenance": "Prior verified breakdown supplied in task handoff; partition total checked against final-verification, underlying breakdown not reread in this scoped review."
+    },
+    "new_duplicate_revision_ids": 5,
+    "new_duplicate_excess_records": 5,
+    "duplicate_context": {
+      "page_ids": [
+        68711819,
+        69945288
+      ],
+      "public_merge_log_id": 127166675,
+      "public_merge_utc_date": "2022-02-02",
+      "provenance": "Page IDs and merge event supplied in prior-study handoff; final-verification confirms hashed raw-XML/public-merge corroboration. Not freshly reparsed or queried here.",
+      "exact_shard_read_order_known": false,
+      "prior_raw_xml_public_merge_corroborated": true,
+      "prior_targeted_binary_records_verified": 10,
+      "prior_raw_probe_full_archive_crc_verified": false
+    },
+    "snapshot_time_evidence": {
+      "new": {
+        "endpoint_label": "20220201",
+        "interpretation": "archive member Modified metadata, not exact extraction cutoff or event interval",
+        "member_modified_max": "2022-02-08 01:28:18",
+        "member_modified_min": "2022-02-07 07:51:46",
+        "observed_member_modified_count": 742,
+        "timezone": "not supplied by archive listing"
+      },
+      "old": {
+        "endpoint_label": "20210501",
+        "interpretation": "archive member Modified metadata, not exact extraction cutoff or event interval",
+        "member_modified_max": "2021-05-08 01:45:15",
+        "member_modified_min": "2021-05-07 08:18:48",
+        "observed_member_modified_count": 705,
+        "timezone": "not supplied by archive listing"
+      }
+    }
+  },
+  "deletion_event_samples": [
+    {
+      "title": "Religion of peace",
+      "old_page_id": 8229053,
+      "old_namespace": 0,
+      "old_redirect": false,
+      "old_revision_count": 1502,
+      "missing_revision_count": 1502,
+      "logid": 121883932,
+      "logpage": 8229053,
+      "query_time_pageid": 68792346,
+      "timestamp": "2021-09-22T19:05:34Z",
+      "request_url": "https://en.wikipedia.org/w/api.php?action=query&list=logevents&letitle=Religion+of+peace&leprop=ids%7Ctitle%7Ctype%7Ctimestamp&ledir=newer&lestart=2021-05-01T00%3A00%3A00Z&leend=2022-03-01T00%3A00%3A00Z&lelimit=50&format=json&formatversion=2",
+      "retrieved_utc": "2026-10-19T07:49:59.136717+00:00",
+      "type": "delete",
+      "action": "delete"
+    },
+    {
+      "title": "Creationist cosmologies",
+      "old_page_id": 1450561,
+      "old_namespace": 0,
+      "old_redirect": false,
+      "old_revision_count": 1294,
+      "missing_revision_count": 1294,
+      "logid": 123152393,
+      "logpage": 1450561,
+      "query_time_pageid": 69109154,
+      "timestamp": "2021-10-25T00:53:05Z",
+      "request_url": "https://en.wikipedia.org/w/api.php?action=query&list=logevents&letitle=Creationist+cosmologies&leprop=ids%7Ctitle%7Ctype%7Ctimestamp&ledir=newer&lestart=2021-05-01T00%3A00%3A00Z&leend=2022-03-01T00%3A00%3A00Z&lelimit=50&format=json&formatversion=2",
+      "retrieved_utc": "2026-10-19T07:49:59.138552+00:00",
+      "type": "delete",
+      "action": "delete"
+    },
+    {
+      "title": "Cushitic peoples",
+      "old_page_id": 36400137,
+      "old_namespace": 0,
+      "old_redirect": false,
+      "old_revision_count": 1229,
+      "missing_revision_count": 1229,
+      "logid": 118144533,
+      "logpage": 36400137,
+      "query_time_pageid": 67994460,
+      "timestamp": "2021-05-26T19:37:19Z",
+      "request_url": "https://en.wikipedia.org/w/api.php?action=query&list=logevents&letitle=Cushitic+peoples&leprop=ids%7Ctitle%7Ctype%7Ctimestamp&ledir=newer&lestart=2021-05-01T00%3A00%3A00Z&leend=2022-03-01T00%3A00%3A00Z&lelimit=50&format=json&formatversion=2",
+      "retrieved_utc": "2026-10-19T07:49:59.139098+00:00",
+      "type": "delete",
+      "action": "delete"
+    },
+    {
+      "title": "2019 in home video",
+      "old_page_id": 59319702,
+      "old_namespace": 0,
+      "old_redirect": false,
+      "old_revision_count": 1968,
+      "missing_revision_count": 1968,
+      "logid": 126522616,
+      "logpage": 59319702,
+      "query_time_pageid": 0,
+      "timestamp": "2022-01-18T15:40:50Z",
+      "request_url": "https://en.wikipedia.org/w/api.php?action=query&list=logevents&letitle=2019+in+home+video&leprop=ids%7Ctitle%7Ctype%7Ctimestamp&ledir=newer&lestart=2021-05-01T00%3A00%3A00Z&leend=2022-03-01T00%3A00%3A00Z&lelimit=50&format=json&formatversion=2",
+      "retrieved_utc": "2026-10-19T07:50:01.463452+00:00",
+      "type": "delete",
+      "action": "delete"
+    },
+    {
+      "title": "KISS (system)",
+      "old_page_id": 17175,
+      "old_namespace": 0,
+      "old_redirect": false,
+      "old_revision_count": 26,
+      "missing_revision_count": 26,
+      "logid": 125787618,
+      "logpage": 17175,
+      "query_time_pageid": 0,
+      "timestamp": "2022-01-02T01:03:01Z",
+      "request_url": "https://en.wikipedia.org/w/api.php?action=query&list=logevents&letitle=KISS+%28system%29&leprop=ids%7Ctitle%7Ctype%7Ctimestamp&ledir=newer&lestart=2021-05-01T00%3A00%3A00Z&leend=2022-03-01T00%3A00%3A00Z&lelimit=50&format=json&formatversion=2",
+      "retrieved_utc": "2026-10-19T07:50:01.505008+00:00",
+      "type": "delete",
+      "action": "delete"
+    }
+  ],
+  "upstream_pins": {
+    "wikipedia-dump-parser": "87039da130d49835b8cbdc5009d7e3be8bc4f543",
+    "wtf_wikipedia_server": "a66606691252165d9135ce9c0c12fa4a3604741f",
+    "wikipedia-dump": "c50f4e991cc96833edc914c586593a1057cb2767"
+  },
+  "upstream_source_sha256": {
+    "wikipedia-dump:goDump/internal/extract/extract_xml_to_json.go": "9cac38abb32896d316af0e493ce9816f117625144e788a0d277e82ebbbac8602",
+    "wikipedia-dump:goDump/internal/graph/graph.go": "4bae601f92c85a4e728134535fea6589333e9e6cca0ecec89be33a6379a22430",
+    "wikipedia-dump:goDump/internal/graph/transformPageInDegreeInNthCategoryToPg/extractCategoryLinks/extract_wiki_sql.go": "6d77e0e302ea93d61831d030c0dbecf258423d20bff9339ee61af82af27f6d57",
+    "wtf_wikipedia_server:grpcServer.js": "dfa95028866d6223cd64abfdaf6adc4a3bc1e936adacdb5d5cfc1b9699d615ec",
+    "wtf_wikipedia_server:worker_tiny.js": "c12e29760fa23085663d12822f39b271d8c185c709e7051f84e7927aa826bf39",
+    "wtf_wikipedia_server:crashCase.js": "44e3b194e42552b22fc30e67937502d58307f5ed2f07fe72abf3eac22c146091",
+    "wtf_wikipedia_server:protos/wikiTextParser.proto": "bbca6e4f5348e793fd2a164e8827f384558efb2311414a538166344d4d9af77a",
+    "wtf_wikipedia_server:package-lock.json": "a4dc189795c6ff482971ffb4962495a2bccb6dbb6e790b563f76c4443bc2cd0f",
+    "wikipedia-dump-parser:wikiparser/wikiparser.go": "25a96449e724d004f878dc666626c83c722841058cb38d4d3b0fa6ca2184326e",
+    "wikipedia-dump-parser:wikiparser/model.go": "e72207b15586000c77ba40ae3da80668efcec36603ead65aa343f0b36b800d51",
+    "wikipedia-dump-parser:go.mod": "c51b627ede0c24edaf001856b53c0d75e5bd6006efacab6ef86b3c61abbced38"
+  }
+}

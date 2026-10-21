@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="Wikipedia 历史网络项目：只读季度计划、来源选择与元数据索引台账。">
+  <title>Wikipedia 历史网络 · 项目台账</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳至主要内容</a>
+  <header class="topbar">
+    <a href="#main" class="brand" aria-label="Wikipedia 历史网络台账首页"><span class="brand-mark" aria-hidden="true">W<span>H</span></span><span>HISTORICAL NETWORK<br><small>Wikipedia research ledger</small></span></a>
+    <nav aria-label="页面导航"><a href="#overview">总览</a><a href="#quarter-plans">季度计划</a><a href="#roadmap">工作路线</a></nav>
+    <span class="local-tag">只读 · 静态界面</span>
+  </header>
+  <main id="main">
+    <section class="page-heading" aria-labelledby="page-title">
+      <div><p class="eyebrow">PROJECT / BUILD LEDGER</p><h1 id="page-title">历史网络 · 构建台账</h1><p id="project-name" class="project-name">Wikipedia Historical Network</p></div>
+      <div class="heading-meta"><span class="phase" id="project-phase">阶段未报告</span><p>Manifest 更新 <span id="generated-at">未提供</span></p><button id="reload-data" type="button" class="quiet-button">重新加载数据 <span aria-hidden="true">↻</span></button></div>
+    </section>
+    <div id="load-state" role="status" aria-live="polite" class="load-state">正在读取项目 manifest…</div>
+    <section id="overview" aria-labelledby="overview-title">
+      <div class="section-line"><h2 id="overview-title">01 <span>来源与索引</span></h2><span class="muted" id="load-transport">等待数据</span></div>
+      <div class="summary-strip">
+        <div><span class="summary-label">清单文件 / Files</span><strong id="file-count">未知</strong><small>仅元数据清单，不代表内容已验证</small></div>
+        <div><span class="summary-label">清单体积 / Inventory size</span><strong id="total-bytes">未知</strong><small id="source-set-count">来源集数量未提供</small></div>
+        <div><span class="summary-label">元数据索引 / Index</span><strong id="index-status">未报告 / 未验证</strong><small id="index-count">索引记录数量未提供</small></div>
+        <div><span class="summary-label">已声明工作 / Work items</span><strong id="work-count">未报告</strong><small>工作项完成度 ≠ 图谱构建进度</small></div>
+      </div>
+      <details class="inventory-details"><summary>来源盘点与存储说明 <span id="host-count">未报告来源</span></summary><div class="inventory-body"><p id="storage-info" class="muted">存储格式与处理位置未提供。</p><p id="index-verified" class="muted">索引验证时间未提供。</p><ul id="host-list" class="host-list"><li>未报告来源状态。</li></ul></div></details>
+    </section>
+    <section id="quarter-plans" aria-labelledby="plans-title">
+      <div class="section-line"><h2 id="plans-title">02 <span>季度快照计划</span></h2><span class="outline-label">计划不等于已构建产物</span></div>
+      <div class="workspace">
+        <section class="plan-browser" aria-label="搜索和筛选季度计划">
+          <div class="filters"><div class="search-field"><label for="plan-search">搜索季度 / Snapshot / Version</label><input id="plan-search" type="search" placeholder="例如 2026Q3 或 enwiki v1" autocomplete="off" disabled></div><div><label for="language-filter">语言 / Wiki</label><select id="language-filter" disabled><option value="">全部语言</option></select></div><div><label for="status-filter">计划状态 / Status</label><select id="status-filter" disabled><option value="">全部状态</option></select></div></div>
+          <div class="results-heading"><span id="result-count" role="status" aria-live="polite">计划尚未加载</span><button id="clear-filters" type="button" class="text-button" disabled>清除筛选</button></div>
+          <div class="table-scroll" tabindex="0" role="region" aria-label="季度计划结果，可滚动"><table><thead><tr><th scope="col">季度 / Snapshot</th><th scope="col">语言</th><th scope="col">版本</th><th scope="col">计划状态</th></tr></thead><tbody id="plan-rows"><tr><td colspan="4" class="empty-state">等待 manifest。不会使用演示数据填充。</td></tr></tbody></table></div>
+          <p class="table-note">选择季度查看来源。状态来自计划清单，不是任务调度器。</p>
+        </section>
+        <aside id="detail-panel" aria-labelledby="detail-heading" class="detail-panel">
+          <div class="detail-top"><p class="eyebrow">SNAPSHOT INSPECTOR</p><h3 id="detail-heading">选择一个季度</h3><span id="selected-status" class="badge">未选择</span></div>
+          <p id="selected-id" class="mono muted">尚无计划数据</p><dl class="detail-metadata"><div><dt>目标时间 / UTC</dt><dd id="selected-target">未提供</dd></div><div><dt>语言</dt><dd id="selected-wiki">未提供</dd></div></dl>
+          <div class="inspect-controls"><div><label for="plan-version">计划版本 / Version</label><select id="plan-version" disabled><option value="">未选择</option></select></div><div><label for="source-select">检查所选来源 / Source</label><select id="source-select" disabled><option value="xml_source">XML · 历史修订</option><option value="sql_source">SQL · 结构信息</option></select></div></div>
+          <p id="selection-note" class="muted small">此处只读检查，不修改来源、不启动计算。</p>
+          <div id="source-detail" class="source-detail">未选择来源。</div>
+          <div class="warnings"><h4>来源提示 / Warnings</h4><ul id="plan-warnings"><li>来源完整性尚未验证。</li></ul></div>
+        </aside>
+      </div>
+    </section>
+    <section id="roadmap" aria-labelledby="roadmap-title">
+      <div class="section-line"><h2 id="roadmap-title">03 <span>工作路线</span></h2><span class="muted">声明状态 · 非实时任务监测</span></div>
+      <div class="roadmap-layout"><div><p id="work-summary" class="work-summary">尚未报告工作项。</p><progress id="work-progress" aria-label="已声明工作项完成度" max="1" value="0" hidden></progress><p class="muted small">只读清单不会启动 parser、wikitext 或批处理作业；没有 manifest 依据时不声称任务正在运行。</p></div><ol id="work-items" class="work-items"><li>等待工作计划。</li></ol></div>
+    </section>
+    <section id="provenance" class="provenance" aria-labelledby="provenance-title"><h2 id="provenance-title">数据边界 / Provenance</h2><div class="provenance-columns"><p><strong>清单 ≠ 验证。</strong>文件数量、体积与索引状态仅反映 manifest 的声明；不可据此推断历史数据完整、可解析或已完成校验。</p><p><strong>季度计划 ≠ 历史图谱。</strong>XML / SQL 日期可以不同。正 offset 表示来源晚于目标时间；来源偏移和覆盖范围必须结合 warnings 审查。</p><p><strong>图谱统计尚不展示。</strong>没有已验证的产物，不生成节点、边或中心性数字。NGD 延后处理；此页也不暗示 parser 作业已启动。</p></div></section>
+    <noscript><p class="load-state">此界面需要启用 JavaScript 读取本地清单。没有加载任何计划或计算结果。</p></noscript>
+  </main>
+  <footer><span>WHN / Research infrastructure</span><span>Local preview only · 无外部字体、CDN 或服务后端</span></footer>
+</body>
+</html>
