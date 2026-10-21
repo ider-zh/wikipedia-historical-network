@@ -15,6 +15,7 @@
 
 已为三台机器保存逐文件metadata索引及错误/覆盖清单，生成 **206份季度来源计划（enwiki、zhwiki各103份，2001Q1—2026Q3）**，204份有候选XML，2份2026Q3因缺少覆盖目标时点的XML而阻塞。所有来源仍须执行前验证；**图构建为0，NGD未开始**。32条访问/缺根错误有明确记录，不声称未知目录全部已查。
 
+- [中文季度P1试跑报告：XML验证通过、图构建受阻](docs/pilot-report.md)
 - [初始化实测报告](docs/initialization-report.md)
 - [逐季度来源组成CSV](dashboard/data/quarterly-plan.csv)
 - [静态dashboard入口](dashboard/index.html)（下载后打开或本地静态HTTP；未部署公共站点）

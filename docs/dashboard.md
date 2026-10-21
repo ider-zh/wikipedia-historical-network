@@ -1,5 +1,9 @@
 # Dashboard contract · 静态项目监测界面
 
+## P1追加状态
+
+当前公开投影中phase为`chinese_pilot_blocked`，validate工作项标为blocked；这是P1实测的静态进度声明，完整季度图仍为0。206份既有来源计划及CSV未修改。`generated_at`仍是原inventory/plan投影生成时间；P1状态更新日期与证据见[试跑报告](pilot-report.md)。此状态暂作为公开投影的审阅更新；重新运行`whn.project`会重建初始化工作项，因此重新发布前必须重新合入已审阅的P1状态，不能把planned回退当新证据。
+
 ## Producer / consumer contract (schema_version 1)
 
 The frontend owns `dashboard/index.html`, `dashboard/styles.css`, and `dashboard/app.js`. The manifest producer owns `dashboard/data/project.json` and `dashboard/data/project.js`; the frontend does **not** fabricate either file.

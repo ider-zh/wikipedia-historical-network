@@ -11,7 +11,9 @@
 - [x] dashboard读取真实清单，通过浏览器HTTP/file/手机/过滤/详情检查。
 - [x] 48项本地测试、真实Parquet与隐私投影检查、独立复审通过；初始化提交已推送GitHub并核对远端HEAD及关键文件blob。GitHub Actions尚未启用：现有OAuth缺workflow权限，已保留未激活模板于docs/ci/。
 
-## P1 中文验证（下一阶段，不在本次自动启动）
+## P1 中文验证（已授权开始；有界局部试跑）
+
+当前目标：zhwiki 2025Q3，cutoff=2025-09-30T23:59:59Z，候选XML/SQL标签2025-10-01。先验证单归档/局部图，不能将局部试跑升级为完整季度snapshot。执行契约见[中文试跑设计](pilot-design.md)。
 
 1. 选择一个来源足够的zhwiki季度；验证原压缩文件hash和覆盖，留足SSD余量。
 2. XML上游选定revision流式提取；在上游加入graph-only所需字段/内存修正和回归测试。
@@ -19,6 +21,10 @@
 4. SQL分类解码先验证schema及同源page映射；历史时间近似标记不可关闭。
 5. 写Parquet并做读回、节点/边/list长度、冲突/unresolved/category环诊断；测量峰值内存、spill、临时空间和吞吐。
 6. 形成真实容量/并发预算后再批准英文批量。
+
+## 2026-10-21 P1阶段实测：受阻，不是完整图
+
+单归档XML完整EOF/CRC及上游历史选择已验证：44,221页、105,128修订、27,180条选中记录与独立审计一致。真实wikitext管道在第27条记录拒绝；SQL缺同源linktarget。**真实局部图与完整季度图均未完成，英文批量不启动。** 详见[试跑报告](pilot-report.md)、[来源验证](pilot-source-validation.md)、[执行契约](pilot-design.md)。主项目65项测试通过；合成Parquet fixture不是维基图产物。
 
 ## P2 英文季度图
 

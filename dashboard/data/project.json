@@ -3,7 +3,7 @@
   "generated_at": "2026-10-21T03:38:48Z",
   "project": {
     "name": "Wikipedia Historical Network",
-    "phase": "source_planning",
+    "phase": "chinese_pilot_blocked",
     "languages": [
       "enwiki",
       "zhwiki"
@@ -6590,8 +6590,8 @@
     },
     {
       "id": "validate",
-      "title": "源覆盖与身份映射预检 + 中文小范围试跑",
-      "status": "planned"
+      "title": "中文2025Q3：单归档XML验证通过；wikitext标签与SQL linktarget阻塞，未产出图",
+      "status": "blocked"
     },
     {
       "id": "english",

@@ -2,6 +2,10 @@
 
 审计日期：2026-10-21。**本阶段只读检查，不修改上游、不安装运行解析服务、不构建图、不提交或推送。** 本仓库负责编排、季度选择、来源/版本记录与图装配；XML 解码及 wikitext 解析的必要改进回到指定上游维护，不在这里复制一套解析器。
 
+## 指定上游P1追加（2026-10-21）
+
+下文保留P0只读审计的历史状态，不代表目前未做上游开发。P1已在两个上游各自的feature branch实现opt-in历史选择与graph-only CLI，测试及真实XML选择见[试跑报告](pilot-report.md)。真实wikitext仍因literal markup拒绝；SQL身份映射亦受阻，不能把新接口和合成测试写成完整季度图已验证。最终commit及复核/发布状态在试跑报告追加；legacy API不被此P1调用替代。
+
 ## Parent integration note
 
 后续父流程已创建并实测SSD的项目专属目录；不改变此前审阅时PermissionError这一事实。上游检查采用只读替代路径，项目现在的staging/catalog/plan可以写入指定SSD。原生可执行依赖位于主机运行环境，因SSD为noexec挂载；业务处理数据仍全部在SSD。
